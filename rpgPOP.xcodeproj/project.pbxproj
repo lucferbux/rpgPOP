@@ -15,6 +15,16 @@
 		3712A9931CDA781600B61D84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3712A9911CDA781600B61D84 /* LaunchScreen.storyboard */; };
 		3712A99E1CDA781600B61D84 /* rpgPOPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3712A99D1CDA781600B61D84 /* rpgPOPTests.swift */; };
 		3712A9A91CDA781600B61D84 /* rpgPOPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3712A9A81CDA781600B61D84 /* rpgPOPUITests.swift */; };
+		3712A9B91CDA9CDB00B61D84 /* mainSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3712A9B81CDA9CDB00B61D84 /* mainSound.mp3 */; };
+		3712A9BB1CDAA42000B61D84 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3712A9BA1CDAA42000B61D84 /* Player.swift */; };
+		3712A9BD1CDAB14C00B61D84 /* Orc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3712A9BC1CDAB14C00B61D84 /* Orc.swift */; };
+		3712A9BF1CDBA8CE00B61D84 /* Character Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3712A9BE1CDBA8CE00B61D84 /* Character Protocol.swift */; };
+		3766E8941CDC042C00356EAF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766E8931CDC042C00356EAF /* MenuViewController.swift */; };
+		37CBF5971CDBCE0300614AAF /* PlayerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CBF5961CDBCE0300614AAF /* PlayerImage.swift */; };
+		37CBF5991CDBEF9700614AAF /* Hero Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CBF5981CDBEF9700614AAF /* Hero Protocol.swift */; };
+		37CBF59B1CDBEFAC00614AAF /* Enemy Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CBF59A1CDBEFAC00614AAF /* Enemy Protocol.swift */; };
+		37CBF59D1CDBF00800614AAF /* Attack Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CBF59C1CDBF00800614AAF /* Attack Protocol.swift */; };
+		37CBF59F1CDBF0B100614AAF /* EnemyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CBF59E1CDBF0B100614AAF /* EnemyImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,16 @@
 		3712A9A41CDA781600B61D84 /* rpgPOPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rpgPOPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3712A9A81CDA781600B61D84 /* rpgPOPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpgPOPUITests.swift; sourceTree = "<group>"; };
 		3712A9AA1CDA781600B61D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3712A9B81CDA9CDB00B61D84 /* mainSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mainSound.mp3; sourceTree = "<group>"; };
+		3712A9BA1CDAA42000B61D84 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		3712A9BC1CDAB14C00B61D84 /* Orc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orc.swift; sourceTree = "<group>"; };
+		3712A9BE1CDBA8CE00B61D84 /* Character Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Character Protocol.swift"; sourceTree = "<group>"; };
+		3766E8931CDC042C00356EAF /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		37CBF5961CDBCE0300614AAF /* PlayerImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerImage.swift; sourceTree = "<group>"; };
+		37CBF5981CDBEF9700614AAF /* Hero Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hero Protocol.swift"; sourceTree = "<group>"; };
+		37CBF59A1CDBEFAC00614AAF /* Enemy Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enemy Protocol.swift"; sourceTree = "<group>"; };
+		37CBF59C1CDBF00800614AAF /* Attack Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attack Protocol.swift"; sourceTree = "<group>"; };
+		37CBF59E1CDBF0B100614AAF /* EnemyImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +120,14 @@
 			isa = PBXGroup;
 			children = (
 				3712A9851CDA781600B61D84 /* AppDelegate.swift */,
-				3712A9871CDA781600B61D84 /* ViewController.swift */,
+				37B6C3751CE5398A00355BF1 /* Controllers */,
+				37B6C3761CE539B300355BF1 /* Model */,
 				3712A9891CDA781600B61D84 /* Main.storyboard */,
 				3712A98F1CDA781600B61D84 /* Assets.xcassets */,
 				3712A9911CDA781600B61D84 /* LaunchScreen.storyboard */,
 				3712A9941CDA781600B61D84 /* Info.plist */,
 				3712A98C1CDA781600B61D84 /* rpgPOP.xcdatamodeld */,
+				3712A9B81CDA9CDB00B61D84 /* mainSound.mp3 */,
 			);
 			path = rpgPOP;
 			sourceTree = "<group>";
@@ -126,6 +148,30 @@
 				3712A9AA1CDA781600B61D84 /* Info.plist */,
 			);
 			path = rpgPOPUITests;
+			sourceTree = "<group>";
+		};
+		37B6C3751CE5398A00355BF1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3712A9871CDA781600B61D84 /* ViewController.swift */,
+				3766E8931CDC042C00356EAF /* MenuViewController.swift */,
+				37CBF5961CDBCE0300614AAF /* PlayerImage.swift */,
+				37CBF59E1CDBF0B100614AAF /* EnemyImage.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		37B6C3761CE539B300355BF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3712A9BE1CDBA8CE00B61D84 /* Character Protocol.swift */,
+				37CBF5981CDBEF9700614AAF /* Hero Protocol.swift */,
+				37CBF59A1CDBEFAC00614AAF /* Enemy Protocol.swift */,
+				37CBF59C1CDBF00800614AAF /* Attack Protocol.swift */,
+				3712A9BA1CDAA42000B61D84 /* Player.swift */,
+				3712A9BC1CDAB14C00B61D84 /* Orc.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3712A9931CDA781600B61D84 /* LaunchScreen.storyboard in Resources */,
+				3712A9B91CDA9CDB00B61D84 /* mainSound.mp3 in Resources */,
 				3712A9901CDA781600B61D84 /* Assets.xcassets in Resources */,
 				3712A98B1CDA781600B61D84 /* Main.storyboard in Resources */,
 			);
@@ -260,8 +307,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3712A98E1CDA781600B61D84 /* rpgPOP.xcdatamodeld in Sources */,
+				37CBF59F1CDBF0B100614AAF /* EnemyImage.swift in Sources */,
+				37CBF59B1CDBEFAC00614AAF /* Enemy Protocol.swift in Sources */,
 				3712A9881CDA781600B61D84 /* ViewController.swift in Sources */,
+				37CBF59D1CDBF00800614AAF /* Attack Protocol.swift in Sources */,
+				3712A9BD1CDAB14C00B61D84 /* Orc.swift in Sources */,
 				3712A9861CDA781600B61D84 /* AppDelegate.swift in Sources */,
+				3766E8941CDC042C00356EAF /* MenuViewController.swift in Sources */,
+				37CBF5971CDBCE0300614AAF /* PlayerImage.swift in Sources */,
+				3712A9BB1CDAA42000B61D84 /* Player.swift in Sources */,
+				37CBF5991CDBEF9700614AAF /* Hero Protocol.swift in Sources */,
+				3712A9BF1CDBA8CE00B61D84 /* Character Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +544,7 @@
 				3712A9AF1CDA781600B61D84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3712A9B01CDA781600B61D84 /* Build configuration list for PBXNativeTarget "rpgPOPTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +553,7 @@
 				3712A9B21CDA781600B61D84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3712A9B31CDA781600B61D84 /* Build configuration list for PBXNativeTarget "rpgPOPUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +562,7 @@
 				3712A9B51CDA781600B61D84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
