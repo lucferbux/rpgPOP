@@ -119,15 +119,16 @@
 		3712A9841CDA781600B61D84 /* rpgPOP */ = {
 			isa = PBXGroup;
 			children = (
-				3712A9851CDA781600B61D84 /* AppDelegate.swift */,
-				37B6C3751CE5398A00355BF1 /* Controllers */,
 				37B6C3761CE539B300355BF1 /* Model */,
+				37B6C3751CE5398A00355BF1 /* Controllers */,
+				96CC202A1D3647DB000E5D3D /* View */,
+				96CC202B1D3647F7000E5D3D /* Resources */,
 				3712A9891CDA781600B61D84 /* Main.storyboard */,
+				3712A9851CDA781600B61D84 /* AppDelegate.swift */,
 				3712A98F1CDA781600B61D84 /* Assets.xcassets */,
 				3712A9911CDA781600B61D84 /* LaunchScreen.storyboard */,
 				3712A9941CDA781600B61D84 /* Info.plist */,
 				3712A98C1CDA781600B61D84 /* rpgPOP.xcdatamodeld */,
-				3712A9B81CDA9CDB00B61D84 /* mainSound.mp3 */,
 			);
 			path = rpgPOP;
 			sourceTree = "<group>";
@@ -155,8 +156,6 @@
 			children = (
 				3712A9871CDA781600B61D84 /* ViewController.swift */,
 				3766E8931CDC042C00356EAF /* MenuViewController.swift */,
-				37CBF5961CDBCE0300614AAF /* PlayerImage.swift */,
-				37CBF59E1CDBF0B100614AAF /* EnemyImage.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +171,23 @@
 				3712A9BC1CDAB14C00B61D84 /* Orc.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		96CC202A1D3647DB000E5D3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37CBF5961CDBCE0300614AAF /* PlayerImage.swift */,
+				37CBF59E1CDBF0B100614AAF /* EnemyImage.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		96CC202B1D3647F7000E5D3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3712A9B81CDA9CDB00B61D84 /* mainSound.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +481,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasIndustries.rpgPOP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -476,6 +493,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasIndustries.rpgPOP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
