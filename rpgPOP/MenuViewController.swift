@@ -21,15 +21,15 @@ class MenuViewController: UIViewController {
         default: selectedCharacter = 1
         }
         
-        performSegueWithIdentifier("showGame", sender: selectedCharacter)
+        performSegue(withIdentifier: "showGame", sender: selectedCharacter)
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         
         if segue.identifier == "showGame"{
-            if let gameVC = segue.destinationViewController as? ViewController{ //we need to cast to the destination
+            if let gameVC = segue.destination as? ViewController{ //we need to cast to the destination
                 if let selection = sender as? Int { //We are expecting a string
                     gameVC.characterSelection = selection
                 }

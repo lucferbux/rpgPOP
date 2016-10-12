@@ -37,10 +37,10 @@ class ViewController: UIViewController {
     //Actions
     @IBAction func onChestPressed(sender: AnyObject) {
         
-        chestButton.hidden = true
+        chestButton.isHidden = true
         printLabel.text = chestMessage
         //Now give some time to do the animation smoother
-        NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.generateRandomEnemy), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewController.generateRandomEnemy), userInfo: nil, repeats: false)
     }
     
     @IBAction func onAttackPressed(sender: AnyObject) {
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         let color = UIColor(red: 242.0/255, green: 214.0/255, blue: 29.0/255, alpha: 1.0)
         printLabel.textColor = color
         
-        if enemy.attemptAttack(attack){
+        if enemy.attemptAttack(attackPwr: attack){
             printLabel.text = "\(player.name) attacked \(enemy.classEnemy) for \(attack)"
             enemyHpLabel.text = "\(enemy.life) HP"
         } else {
@@ -59,16 +59,16 @@ class ViewController: UIViewController {
         if let loot = enemy.dropLoot() {
             //player.addItemToInventory(loot)
             chestMessage = "\(player.name) found \(loot)"
-            chestButton.hidden = false
+            chestButton.isHidden = false
         }
-        attackButton.enabled = false
+        attackButton.isEnabled = false
         if !enemy.isAlive {
             enemyHpLabel.text = ""
             printLabel.text = "Killed \(enemy.classEnemy)"
-            enemyImage.hidden = true
+            enemyImage.isHidden = true
         }else{
             
-            NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.enemyAttacks), userInfo: nil, repeats: false)
+            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewController.enemyAttacks), userInfo: nil, repeats: false)
         }
         
     }
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         newGame()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         //newGame()
     }
     
@@ -94,10 +94,10 @@ class ViewController: UIViewController {
         generatePlayer()
         generateRandomEnemy()
         
-        let audioPath = NSBundle.mainBundle().pathForResource("mainSound", ofType: "mp3")!
+        let audioPath = Bundle.main.path(forResource: "mainSound", ofType: "mp3")!
         do{
             try
-                playerAudio = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath)!)
+                playerAudio = AVAudioPlayer(contentsOf: NSURL(string: audioPath)! as URL)
             playerAudio.numberOfLoops = -1
             
         } catch let error as NSError {
@@ -113,15 +113,15 @@ class ViewController: UIViewController {
         
         if rand == 0 {
             enemy = Orc(life: CharStat.Enemy.Life.AxeOrc, weapon: CharStat.Enemy.Weapon.Axe, armor: CharStat.Enemy.Armor.LeatherArmor, classEnemy: CharStat.Enemy.EnemyClass.AxeOrc)
-            enemyImage.playIdleAnimation("AxeOrc")
+            enemyImage.playIdleAnimation(name: "AxeOrc")
         }else{
             enemy = Orc(life: CharStat.Enemy.Life.StickOrc, weapon: CharStat.Enemy.Weapon.Stick, armor: CharStat.Enemy.Armor.RustyIronArmor, classEnemy: CharStat.Enemy.EnemyClass.StickOrc)
-            enemyImage.playIdleAnimation("StickOrc")
+            enemyImage.playIdleAnimation(name: "StickOrc")
         }
         
         enemyHpLabel.text = "\(enemy.life) HP"
-        enemyImage.hidden = false
-        attackButton.enabled = true
+        enemyImage.isHidden = false
+        attackButton.isEnabled = true
         printLabel.text = "An \(enemy.classEnemy) appeared!"
     }
 
@@ -130,7 +130,7 @@ class ViewController: UIViewController {
         let color = UIColor(red: 176/255, green: 9/255, blue: 53/255, alpha: 1.0)
         printLabel.textColor = color
         
-        if player.attemptAttack(attack){
+        if player.attemptAttack(attackPwr: attack){
             printLabel.text = "\(enemy.classEnemy) attacked \(player.name) for \(attack)"
             playerHpLabel.text = "\(player.life) HP"
         } else {
@@ -141,16 +141,16 @@ class ViewController: UIViewController {
             //playerImage.hidden = true
             playerHpLabel.text = ""
             printLabel.text = "You loose."
-            NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.playerDead), userInfo: nil, repeats: false)
+            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewController.playerDead), userInfo: nil, repeats: false)
         }else{
-            attackButton.enabled = true
+            attackButton.isEnabled = true
         }
     }
     
     func playerDead() {
         
         playerAudio.stop()
-        performSegueWithIdentifier("showMenu", sender: nil)
+        performSegue(withIdentifier: "showMenu", sender: nil)
         
     }
     
@@ -170,11 +170,11 @@ class ViewController: UIViewController {
         imageSelection = "Knight"
         }
         
-        playerImage.playIdleAnimation(imageSelection!)
+        playerImage.playIdleAnimation(name: imageSelection!)
         playerHpLabel.text = "\(player.life) HP"
-        playerImage.hidden = false
+        playerImage.isHidden = false
         printLabel.text = "Press the attack button to attack"
-        attackButton.enabled = true
+        attackButton.isEnabled = true
     }
 
 }
